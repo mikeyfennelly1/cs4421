@@ -53,3 +53,5 @@ dkms.conf
 
 /.idea
 /cs4421.iml
+/project/*.class
+/project/*.h

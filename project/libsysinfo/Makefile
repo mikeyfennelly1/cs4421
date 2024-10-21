@@ -4,10 +4,10 @@ HEADERS=$(MODULES:%=../%.h)
 
 #  Location of openjdk headers.  Change this according to your 
 #  version and architecture
-OPENJDK=/usr/lib/jvm/java-11-openjdk-amd64/include
+OPENJDK=~/.jdks/openjdk-22.0.2/include
 
 libsysinfo.so: $(SOURCES) $(HEADERS)
 	gcc -fPIC -I .. -I $(OPENJDK) \
         -I $(OPENJDK)/linux -shared \
-        -o libsysinfo.so $(SOURCES)
+        -o libsysinfo.so $(SOURCES) -lstdc++
 
